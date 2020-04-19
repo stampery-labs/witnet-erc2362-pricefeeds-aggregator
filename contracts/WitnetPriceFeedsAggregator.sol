@@ -30,12 +30,15 @@ contract WitnetPriceFeedsAggregator is IERC2362 {
   /**
   * @notice Queries a price feed contract for the latest value. Note that we can only query feeds that has been
   * previously registered through the `registerFeed` function.
+  * @dev Returns error `404` if queried for an unsupported data point ID.
   * @param _id An ERC-2362 compliant data point ID.
   * @return value, timestamp and status, as provided for by ERC-2362.
   **/
   function valueFor(bytes32 _id) external view override returns(int256, uint256, uint256) {
     address feed = feeds[_id];
-    require(feed != address(0), "Unsupported feed ID");
+
+    // Return error if queried for an ID that is not registered in `feeds`.
+    if (feed != address(0)) return(0, 0, 404);
 
     return IERC2362(feed).valueFor(_id);
   }
