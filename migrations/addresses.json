@@ -1,0 +1,17 @@
+{
+  "rinkeby": {
+    "BtcUsdPriceFeed": {
+       "id" : "0x637b7efb6b620736c247aaa282f3898914c0bef6c12faff0d3fe9d4bea783020",
+       "address" : "0x82CDC5a0Befe3198ca9Df4a9F542061522eD385B#readContract"
+    },
+    "EthUsdPriceFeed": {
+       "id" : "0xdfaa6f747f0f012e8f2069d6ecacff25f5cdf0258702051747439949737fc0b5",
+       "address": "0xc2Fb2a4A735A77e557483EC210909C20809f4F1a"
+    },
+    "GoldEurPriceFeed": {
+       "id" : "0x68cba0705475e40c1ddbf7dc7c1ae4e7320ca094c4e118d1067c4dea5df28590",
+       "address" : "0x68A5F47B0913b06347fd79D1311Eec1f30c0004d"
+    }
+  }
+}
+
