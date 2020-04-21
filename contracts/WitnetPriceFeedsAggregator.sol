@@ -38,7 +38,7 @@ contract WitnetPriceFeedsAggregator is IERC2362 {
     address feed = feeds[_id];
 
     // Return error if queried for an ID that is not registered in `feeds`.
-    if (feed != address(0)) return(0, 0, 404);
+    if (feed == address(0)) return(0, 0, 404);
 
     return IERC2362(feed).valueFor(_id);
   }
